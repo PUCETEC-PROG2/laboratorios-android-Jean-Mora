@@ -36,7 +36,7 @@ fun RepoList(
         RepoItem(
             name = "repositorio de android",
             description = "repositorio creado por kotlin",
-            avatarURL = "https://www.google.com/imgres?q=imagenes&imgurl=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fthumbnails%2F004%2F125%2F202%2Fsmall%2Fpanorama-of-night-sky-with-clouds-and-full-moon-photo.jpg&imgrefurl=https%3A%2F%2Fes.vecteezy.com%2Ffotos-gratis%2Fnoche&docid=QpgcyZqE98wyGM&tbnid=JorxlGyICWaz8M&vet=12ahUKEwjvxqe3kreUAxVR48kDHWhrDGkQnPAOegQIGBAB..i&w=758&h=350&hcb=2&ved=2ahUKEwjvxqe3kreUAxVR48kDHWhrDGkQnPAOegQIGBAB",
+            avatarURL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmiopXZQ8AJQI7fpxahzh-FwX-SAw_nEiLnQ&s",
             language = "Kotlin"
         )
 
