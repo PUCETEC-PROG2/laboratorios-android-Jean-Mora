@@ -15,21 +15,21 @@ fun RepoList(
         RepoItem(
             name = "repositorio de android",
             description = "repositorio creado por kotlin",
-            avatarURL = "https://www.google.com/imgres?q=imagenes&imgurl=https%3A%2F%2Fwww.hazunaweb.com%2Fimagenes%2Fprueba.jpg&imgrefurl=https%3A%2F%2Fwww.hazunaweb.com%2Fcurso-de-html%2Fimagenes%2F&docid=r1Bdi-hfppC9FM&tbnid=ParQpPe1iWmS0M&vet=12ahUKEwi89ZftkreUAxX1fjABHXBeCTg4ChCc8A56BAhiEAE..i&w=400&h=300&hcb=2&ved=2ahUKEwi89ZftkreUAxX1fjABHXBeCTg4ChCc8A56BAhiEAE",
+            avatarURL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr1FEAkfTLz7PsGioXaxi0sqg8D8bf5d5T-w&s",
             language = "Kotlin"
         )
 
         RepoItem(
             name = "repositorio de android",
             description = "repositorio creado por kotlin",
-            avatarURL = "https://www.google.com/imgres?q=imagenes&imgurl=https%3A%2F%2Fwww.tooltyp.com%2Fwp-content%2Fuploads%2F2014%2F10%2F1900x920-8-beneficios-de-usar-imagenes-en-nuestros-sitios-web.jpg&imgrefurl=https%3A%2F%2Fwww.tooltyp.com%2F8-beneficios-de-usar-imagenes-en-nuestros-sitios-web%2F&docid=53-N2MbZIY2M8M&tbnid=QyjckPLcTSohTM&vet=12ahUKEwjvxqe3kreUAxVR48kDHWhrDGkQnPAOegQIHhAB..i&w=1900&h=920&hcb=2&ved=2ahUKEwjvxqe3kreUAxVR48kDHWhrDGkQnPAOegQIHhAB",
+            avatarURL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr1FEAkfTLz7PsGioXaxi0sqg8D8bf5d5T-w&s",
             language = "Python"
         )
 
         RepoItem(
             name = "repositorio de android",
             description = "repositorio creado por kotlin",
-            avatarURL = "https://www.google.com/imgres?q=imagenes&imgurl=https%3A%2F%2Fneliosoftware.com%2Fes%2Fwp-content%2Fuploads%2Fsites%2F3%2F2018%2F07%2Faziz-acharki-549137-unsplash-1200x775.jpg&imgrefurl=https%3A%2F%2Fneliosoftware.com%2Fes%2Fblog%2Fimagenes-gratuitas-para-tu-blog%2F&docid=YGl5kRGw4lfrHM&tbnid=QUOv_rpoZt4zCM&vet=12ahUKEwjvxqe3kreUAxVR48kDHWhrDGkQnPAOegQILhAB..i&w=1200&h=775&hcb=2&ved=2ahUKEwjvxqe3kreUAxVR48kDHWhrDGkQnPAOegQILhAB",
+            avatarURL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr1FEAkfTLz7PsGioXaxi0sqg8D8bf5d5T-w&s",
             language = "Kotlin"
         )
 
@@ -43,7 +43,7 @@ fun RepoList(
         RepoItem(
             name = "repositorio de android",
             description = "repositorio creado por kotlin",
-            avatarURL = "https://www.hazunaweb.com/curso-de-html/imagenes/",
+            avatarURL = "https://www.hazunaweb.com/imagenes/prueba.jpg",
             language = "Kotlin"
         )
     }
