@@ -15,21 +15,21 @@ fun RepoList(
         RepoItem(
             name = "repositorio de android",
             description = "repositorio creado por kotlin",
-            avatarURL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr1FEAkfTLz7PsGioXaxi0sqg8D8bf5d5T-w&s",
+            avatarURL = "https://cdn.pixabay.com/photo/2023/03/16/08/42/camping-7856198_640.jpg",
             language = "Kotlin"
         )
 
         RepoItem(
             name = "repositorio de android",
             description = "repositorio creado por kotlin",
-            avatarURL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr1FEAkfTLz7PsGioXaxi0sqg8D8bf5d5T-w&s",
+            avatarURL = "https://unsplash-assets.imgix.net/modules/asset-edit/photo.png?auto=format&fit=crop&q=60",
             language = "Python"
         )
 
         RepoItem(
             name = "repositorio de android",
             description = "repositorio creado por kotlin",
-            avatarURL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr1FEAkfTLz7PsGioXaxi0sqg8D8bf5d5T-w&s",
+            avatarURL = "https://static.vecteezy.com/system/resources/thumbnails/004/125/202/small/panorama-of-night-sky-with-clouds-and-full-moon-photo.jpg",
             language = "Kotlin"
         )
 
