@@ -1,50 +1,63 @@
 package ec.edu.puce.githubclient.ui.screens
 
-import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import ec.edu.puce.githubclient.ui.components.RepoItem
+import ec.edu.puce.githubclient.viewmodels.RepoListViewModels
+import androidx.compose.foundation.lazy.items
 
 @Composable
 fun RepoList(
-    modifier: Modifier= Modifier
-){
-    Column (
-        modifier = Modifier
-    ){
-        RepoItem(
-            name = "repositorio de android",
-            description = "repositorio creado por kotlin",
-            avatarURL = "https://cdn.pixabay.com/photo/2023/03/16/08/42/camping-7856198_640.jpg",
-            language = "Kotlin"
-        )
+    modifier: Modifier = Modifier,
+    viewModel: RepoListViewModels = viewModel()
+) {
 
-        RepoItem(
-            name = "repositorio de android",
-            description = "repositorio creado por kotlin",
-            avatarURL = "https://unsplash-assets.imgix.net/modules/asset-edit/photo.png?auto=format&fit=crop&q=60",
-            language = "Python"
-        )
+    val repos by viewModel.repos.collectAsState()
+    val isLoading by viewModel.isLoading.collectAsState()
+    val errorMsg by viewModel.errorMsg.collectAsState()
 
-        RepoItem(
-            name = "repositorio de android",
-            description = "repositorio creado por kotlin",
-            avatarURL = "https://static.vecteezy.com/system/resources/thumbnails/004/125/202/small/panorama-of-night-sky-with-clouds-and-full-moon-photo.jpg",
-            language = "Kotlin"
-        )
+    Box(
+        modifier = modifier.fillMaxSize()
+    ) {
 
-        RepoItem(
-            name = "repositorio de android",
-            description = "repositorio creado por kotlin",
-            avatarURL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmiopXZQ8AJQI7fpxahzh-FwX-SAw_nEiLnQ&s",
-            language = "Kotlin"
-        )
+        if (isLoading) {
+            CircularProgressIndicator(
+                modifier = Modifier.align(Alignment.Center)
+            )
+        }
 
-        RepoItem(
-            name = "repositorio de android",
-            description = "repositorio creado por kotlin",
-            avatarURL = "https://www.hazunaweb.com/imagenes/prueba.jpg",
-            language = "Kotlin"
-        )
+        errorMsg?.let {
+            Text(
+                text = it,
+                color = MaterialTheme.colorScheme.error,
+                modifier = Modifier
+                    .align(Alignment.Center)
+                    .padding(16.dp)
+            )
+        }
+
+        if (!isLoading && errorMsg.isNullOrBlank()) {
+
+            LazyColumn(
+                modifier = Modifier.fillMaxSize()
+            ) {
+
+                items(repos) { repo ->
+                    RepoItem(repo)
+                }
+            }
+        }
     }
 }
