@@ -29,35 +29,34 @@ import ec.edu.puce.githubclient.ui.theme.GithubClientTheme
 @Composable
 fun RepoList(
     modifier: Modifier = Modifier,
-    viewModel: RepoListViewModels = viewModel()
+    viewModel: RepoListViewModels = viewModel(),
+    onNavigateToForm: () -> Unit = {}
 ) {
-
     val repos by viewModel.repos.collectAsState()
     val isLoading by viewModel.isLoading.collectAsState()
     val errorMsg by viewModel.errorMsg.collectAsState()
 
-    Scaffold (
+    Scaffold(
+        modifier = modifier,
         floatingActionButton = {
             FloatingActionButton(
-                onClick = {},
+                onClick = onNavigateToForm,
                 shape = CircleShape,
-                containerColor = MaterialTheme.colorScheme.onPrimaryContainer,
+                containerColor = MaterialTheme.colorScheme.primaryContainer,
                 contentColor = MaterialTheme.colorScheme.onPrimaryContainer
             ) {
                 Icon(
                     imageVector = Icons.Default.Add,
-                    contentDescription = "Agregar"
+                    contentDescription = "Agregar Repositorio"
                 )
-
             }
         }
-    ) {innerPadding ->
+    ) { innerPadding ->
         Box(
-            modifier = modifier
+            modifier = Modifier
                 .fillMaxSize()
-                .padding(paddingValues = innerPadding)
+                .padding(innerPadding) // Aplica el padding del Scaffold aquí
         ) {
-
             if (isLoading) {
                 CircularProgressIndicator(
                     modifier = Modifier.align(Alignment.Center)
@@ -75,11 +74,9 @@ fun RepoList(
             }
 
             if (!isLoading && errorMsg.isNullOrBlank()) {
-
                 LazyColumn(
                     modifier = Modifier.fillMaxSize()
                 ) {
-
                     items(repos) { repo ->
                         RepoItem(repo)
                     }
